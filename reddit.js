@@ -11,8 +11,6 @@ ASQ().then(function(done,msg){
 
     prompt.get(['Subreddit'], function (err, result) {
         if (err) { return onErr(err); }
-        console.log('Command-line input received:');
-        console.log(result['Subreddit']);
         done(result['Subreddit']);
       });
 
@@ -51,10 +49,10 @@ ASQ().then(function(done,msg){
 
         done(data);
       });
+
+    //open the correct choice
 }).then(function(done,msg){
     var url = "http://www.reddit.com/r/"+msg.sub+"/.json";
-
-
 
     request({
         url: url,
@@ -68,7 +66,7 @@ ASQ().then(function(done,msg){
 
                 if (i==msg.selection) {
                     exec('open '+obj.data.url, function (error, stdout, stderr) {
-                      // output is in stdout
+
                     });
                     console.log(obj.data.url);
                 };
