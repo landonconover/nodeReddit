@@ -1,0 +1,11 @@
+{
+  "name": "Reddit_Commandline",
+  "version": "0.0.0",
+  "description": "Reddit from the Commandline",
+  "main": "reddit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
